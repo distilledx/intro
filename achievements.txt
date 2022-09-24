@@ -1,0 +1,8 @@
+all_voids
+discord
+college books
+git
+next
+graphql
+learning: c,rust
+mental stuff
