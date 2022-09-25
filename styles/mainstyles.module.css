@@ -1,8 +1,21 @@
 .main-head {
+    color: #b8dbd9;
+    position: relative;
+    top: -4vh;
     font-family: Poppins;
-    font-size: 11vw;
+    text-align: center;
 }
 
-.main-head-x {
-    color: red;
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-foot {
+    font-family: 'Open Sans';
+    position: relative;
+    top: -7vh;
+    text-align: right;
 }
