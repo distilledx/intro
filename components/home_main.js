@@ -4,13 +4,25 @@ import circles from '../styles/circles.module.css';
 
 export default function MainTitle() {
     const [textSize, setTextSize] = useState(0);
-    const [circleSize, setCircleSize] = useState(0);
+    const [bigCircleSize, setBigCircleSize] = useState(0);
 
     useEffect(() => {
-        window.outerWidth / 100 < 5 ? setTextSize(window.outerWidth / 100) : setTextSize(window.outerWidth / 175);
+        if (window.outerWidth / 100 < 5) {
+            setTextSize(window.outerWidth / 100);
+            setBigCircleSize(60);
+        } else {
+            setTextSize(window.outerWidth / 175);
+            setBigCircleSize(30);
+        }
 
         const listener = window.addEventListener('resize', () => {
-            window.outerWidth / 100 < 5 ? setTextSize(window.outerWidth / 100) : setTextSize(window.outerWidth / 175);
+            if (window.outerWidth / 100 < 5) {
+                setTextSize(window.outerWidth / 100);
+                setBigCircleSize(60);
+            } else {
+                setTextSize(window.outerWidth / 175);
+                setBigCircleSize(30);
+            }
         });
 
         return () => window.removeEventListener('resize', listener);
@@ -26,7 +38,7 @@ export default function MainTitle() {
                     <span style={{ color: '#A5B6C0' }}>-By Tejas Vipin</span>
                 </h6>
             </div>
-            <span className={circles['big']}></span>
+            <span className={circles['big']} style={{ height: `${bigCircleSize}vw`, width: `${bigCircleSize}vw` }}></span>
         </>
     );
 }
