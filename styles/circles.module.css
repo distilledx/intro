@@ -1,0 +1,15 @@
+.big {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    display: block;
+    z-index: 1;
+    position: absolute;
+    top: 25vh;
+    left: 30vw;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(1vh);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4vh 8vh 0 rgba(0, 0, 0, 0.1);
+}
