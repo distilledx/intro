@@ -1,10 +1,10 @@
-.main-head {
+.github {
     color: #b8dbd9;
     position: relative;
-    top: -4vh;
     font-family: Poppins;
     text-align: center;
     padding-bottom: 1vh;
+    background-color: #212b30;
 }
 
 .main {
@@ -15,9 +15,10 @@
     z-index: 0;
 }
 
-.main-foot {
+.name {
     font-family: 'Open Sans';
     position: relative;
-    top: -7vh;
     text-align: right;
+    color: #a5b6c0;
+    z-index: 0;
 }
