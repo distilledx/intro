@@ -12,13 +12,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
+    z-index: 3;
 }
 
 .name {
     font-family: 'Open Sans';
     position: relative;
     text-align: right;
-    color: #a5b6c0;
+    color: #7c8a92;
     z-index: 0;
 }

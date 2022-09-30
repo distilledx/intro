@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import home_head from '../styles/home_head.module.css';
 import circles from '../styles/circles.module.css';
+import Blobs from './blobs.js';
 
 export default function MainTitle() {
     const [textSize, setTextSize] = useState(0);
@@ -40,8 +41,7 @@ export default function MainTitle() {
                     By Tejas Vipin
                 </h6>
             </div>
-            <span className={`${circles['circle']} ${circles['big']}`} style={{ height: `${bigCircleSize}vw`, width: `${bigCircleSize}vw` }}></span>
-            <span className={`${circles['circle']} ${circles['small']}`} style={{ height: `${smallCircleSize}vw`, width: `${smallCircleSize}vw` }}></span>
+            <Blobs />
         </>
     );
 }
