@@ -1,0 +1,13 @@
+.text {
+    color: #f4f4f9;
+    font-family: Poppins;
+    font-size: 5vh;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+.ip {
+    color: #b8dbd9;
+    text-decoration: underline;
+}
