@@ -1,10 +1,11 @@
 .text {
     color: #f4f4f9;
     font-family: Poppins;
-    font-size: 5vh;
+    font-size: 4vh;
     text-align: center;
     z-index: 10;
     position: relative;
+    top: 120%;
 }
 
 .ip {
