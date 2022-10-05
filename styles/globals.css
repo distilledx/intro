@@ -8,12 +8,13 @@ body,
     background: linear-gradient(#2f4550 0%, #000000 100%);
     scroll-behavior: smooth;
     background-repeat: no-repeat;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* ::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
-} */
+::-webkit-scrollbar {
+    display: none;
+}
 
 * {
     box-sizing: border-box;
