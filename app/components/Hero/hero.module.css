@@ -2,3 +2,18 @@
     font-family: 'Inter', sans-serif;
     font-size: 10vh;
 }
+
+.sub {
+    font-family: 'Source Serif 4', serif;
+    font-size: 3vh;
+    text-shadow: 2px 2px 3px gray;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
