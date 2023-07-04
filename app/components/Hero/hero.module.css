@@ -2,6 +2,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 10vh;
     position: relative;
+    padding: 30px;
 }
 
 .sub {
@@ -43,6 +44,26 @@
     transform: translate(-50%);
 }
 
+.lineLeftH {
+    border: 1px solid #000000;
+    position: absolute;
+    min-height: 1px;
+    max-height: 1px;
+    top: 50%;
+    left: 100%;
+    width: 50vw;
+}
+
+.lineLeftV {
+    border: 1px solid #000000;
+    position: absolute;
+    min-width: 1px;
+    max-width: 1px;
+    height: 10vh;
+    top: 0%;
+    transform: translate(0%, -50%);
+}
+
 .arrow {
     border: solid black;
     border-width: 0 2px 2px 0;
@@ -56,3 +77,10 @@
     left: -6px;
     position: absolute;
 }
+
+.left {
+    transform: rotate(135deg);
+    top: -6px;
+    left: 2px;
+    position: absolute;
+  }
