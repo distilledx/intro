@@ -1,19 +1,58 @@
 .head {
     font-family: 'Inter', sans-serif;
     font-size: 10vh;
+    position: relative;
 }
 
 .sub {
     font-family: 'Source Serif 4', serif;
     font-size: 3vh;
-    text-shadow: 2px 2px 3px gray;
+    text-shadow: 2px 2px 3px #808080;
+    position: relative;
 }
 
-.center {
+.text {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100vw;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+.lineUpV {
+    border: 1px solid #000000;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    height: 50vh;
+    min-width: 1px;
+    max-width: 1px;
+}
+
+.lineUpH {
+    border: 1px solid #000000;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 10vw;
+    min-height: 1px;
+    max-height: 1px;
+    transform: translate(-50%);
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+  }
+
+.down {
+    transform: rotate(45deg);
+    bottom: 1px;
+    left: -6px;
+    position: absolute;
 }
