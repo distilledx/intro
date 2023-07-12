@@ -83,4 +83,49 @@
     top: -6px;
     left: 2px;
     position: absolute;
-  }
+}
+
+.triangle {
+    width: 20vh;
+    height: 17vh;
+    background-color: #1E1414;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    left: 5%;
+    top: 5%;
+    position: absolute;
+}
+
+.menuText {
+    top: 60%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-family: 'Source Serif 4', serif;
+    font-size: 3vh;
+    color: #FFFFFF;
+    font-style: italic;
+}
+
+.scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.circle {
+    height: 30px;
+    width: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.scrollText {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5vh;
+}
