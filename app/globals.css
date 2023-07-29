@@ -7,7 +7,7 @@
 html,
 body {
     background-image: linear-gradient(#f6c1be, #cbe2f0);
-    /* width: 100vw; */
+    width: 100vw;
     height: 100vh;
     overflow-x: hidden;
 }
