@@ -2,7 +2,7 @@ import styles from "./hero.module.css";
 
 export default function Hero() {
     return (
-        <>
+        <div className={styles.container}>
             <div className={styles.triangle}>
                 <p className={styles.menuText}>Menu</p>
             </div>
@@ -26,6 +26,6 @@ export default function Hero() {
                 <div className={styles.circle} style={{ opacity: 0.75 }}></div>
                 <p className={styles.scrollText}>SCROLL</p>
             </div>
-        </>
+        </div>
     );
 }

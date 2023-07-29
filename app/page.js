@@ -1,4 +1,5 @@
 import Hero from "./components/Hero/hero";
+import Projects from "./components/Projects/projects";
 
 export default function Page() {
     return (
@@ -12,6 +13,7 @@ export default function Page() {
                 rel="stylesheet"
             ></link>
             <Hero />
+            <Projects />
         </>
     );
 }
