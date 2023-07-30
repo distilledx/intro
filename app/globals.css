@@ -4,10 +4,6 @@
     margin: 0;
 }
 
-html,
 body {
-    background-image: linear-gradient(#f6c1be, #cbe2f0);
-    position: fixed;
-    width: 100vw;
     overflow-x: hidden;
 }
