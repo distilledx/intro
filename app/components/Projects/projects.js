@@ -15,19 +15,21 @@ export default function Projects() {
                     <div className={styles.blueR}></div>
                 </div>
                 <div className={styles.right}>
-                    <Image src={rscreen} alt="" />
+                    <Image src={rscreen} alt="" priority={true} />
                     <Image
                         src={p1R}
                         alt=""
                         className={`${styles.pictures} ${styles.right}`}
+                        priority={true}
                     />
                 </div>
                 <div className={styles.left}>
-                    <Image src={lscreen} alt="" />
+                    <Image src={lscreen} alt="" priority={true} />
                     <Image
                         src={p1L}
                         alt=""
                         className={`${styles.pictures} ${styles.left}`}
+                        priority={true}
                     />
                 </div>
             </div>
