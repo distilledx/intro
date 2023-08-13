@@ -6,6 +6,7 @@
 .fullContainer {
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
     position: relative;
 }
 
@@ -45,4 +46,32 @@
     right: 0%;
     left: 0%;
     position: absolute;
+}
+
+.plus {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    background: linear-gradient(#ced3dc 0 0), linear-gradient(#ced3dc 0 0),
+        #353535;
+    background-position: center;
+    background-size: 50% 2px, 2px 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+    transform: skew(15deg);
+}
+
+.bLeft {
+    top: 22%;
+    left: 55%;
+    transform: skew(-14deg, 5deg);
+}
+
+.bRight {
+    top: 70%;
+    left: 37%;
+    transform: skew(-14deg, 5deg);
 }

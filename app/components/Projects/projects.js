@@ -22,6 +22,7 @@ export default function Projects() {
                         className={`${styles.pictures} ${styles.right}`}
                         priority={true}
                     />
+                    <div className={`${styles.plus} ${styles.bRight}`}></div>
                 </div>
                 <div className={styles.left}>
                     <Image src={lscreen} alt="" priority={true} />
@@ -31,6 +32,7 @@ export default function Projects() {
                         className={`${styles.pictures} ${styles.left}`}
                         priority={true}
                     />
+                    <div className={`${styles.plus} ${styles.bLeft}`}></div>
                 </div>
             </div>
         </>
