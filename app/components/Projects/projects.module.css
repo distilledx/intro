@@ -75,3 +75,27 @@
     left: 37%;
     transform: skew(-14deg, 5deg);
 }
+
+.circle {
+    padding: 25px;
+    z-index: 5;
+}
+
+.cLeft {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+.cRight {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.cMiddle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
