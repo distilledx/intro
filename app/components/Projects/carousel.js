@@ -38,7 +38,8 @@ export default function ImageCarousel({ sources, lr }) {
             <Image
                 src={currentA}
                 className={`${styles.pictures} ${lr}`}
-                alt=""
+                alt="Projects"
+                priority={true}
                 style={{
                     zIndex: "4",
                     maskImage: `linear-gradient(to right,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1)${stop}%, rgba(255, 255, 255, 0) ${stop}%, rgba(255, 255, 255, 0) 100%)`,

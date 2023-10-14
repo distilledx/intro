@@ -22,12 +22,12 @@ export default function Projects() {
                     <div className={styles.blueR}></div>
                 </div>
                 <div className={styles.right}>
-                    <Image src={rscreen} alt="" priority={true} />
+                    <Image src={rscreen} alt="Laptop screen" priority={true} />
                     <ImageCarousel sources={imgR} lr={styles.right} />
                     <div className={`${styles.plus} ${styles.bRight}`}></div>
                 </div>
                 <div className={styles.left}>
-                    <Image src={lscreen} alt="" priority={true} />
+                    <Image src={lscreen} alt="Laptop screen" priority={true} />
                     <ImageCarousel sources={imgL} lr={styles.left} />
                     <div className={`${styles.plus} ${styles.bLeft}`}></div>
                 </div>
