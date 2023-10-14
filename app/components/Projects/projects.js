@@ -1,10 +1,17 @@
 import styles from "./projects.module.css";
 import Image from "next/image";
+import ImageCarousel from "./carousel.js";
+
 import lscreen from "../../../public/left-screen.png";
 import rscreen from "../../../public/right-screen.png";
 
 import p1L from "../../../public/projects/1-L.png";
 import p1R from "../../../public/projects/1-R.png";
+import p2L from "../../../public/projects/2-L.png";
+import p2R from "../../../public/projects/2-R.png";
+
+const imgR = [p1R, p2R];
+const imgL = [p2L, p1L];
 
 export default function Projects() {
     return (
@@ -16,28 +23,18 @@ export default function Projects() {
                 </div>
                 <div className={styles.right}>
                     <Image src={rscreen} alt="" priority={true} />
-                    <Image
-                        src={p1R}
-                        alt=""
-                        className={`${styles.pictures} ${styles.right}`}
-                        priority={true}
-                    />
+                    <ImageCarousel sources={imgR} lr={styles.right} />
                     <div className={`${styles.plus} ${styles.bRight}`}></div>
                 </div>
                 <div className={styles.left}>
                     <Image src={lscreen} alt="" priority={true} />
-                    <Image
-                        src={p1L}
-                        alt=""
-                        className={`${styles.pictures} ${styles.left}`}
-                        priority={true}
-                    />
+                    <ImageCarousel sources={imgL} lr={styles.left} />
                     <div className={`${styles.plus} ${styles.bLeft}`}></div>
                 </div>
                 <div className={`${styles.circle} ${styles.cRight}`}>
                     <svg
-                        width="70"
-                        height="70"
+                        width="50"
+                        height="50"
                         viewBox="0 0 100 100"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -57,8 +54,8 @@ export default function Projects() {
                 </div>
                 <div className={`${styles.circle} ${styles.cMiddle}`}>
                     <svg
-                        width="100"
-                        height="100"
+                        width="70"
+                        height="70"
                         viewBox="0 0 125 125"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -76,8 +73,8 @@ export default function Projects() {
                 </div>
                 <div className={`${styles.circle} ${styles.cLeft}`}>
                     <svg
-                        width="70"
-                        height="70"
+                        width="50"
+                        height="50"
                         viewBox="0 0 100 100"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
