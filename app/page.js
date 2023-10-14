@@ -1,5 +1,6 @@
 import Hero from "./components/Hero/hero";
 import Projects from "./components/Projects/projects";
+import Skills from "./components/Skills/skills";
 
 export default function Page() {
     return (
@@ -14,6 +15,7 @@ export default function Page() {
             ></link>
             <Hero />
             <Projects />
+            <Skills />
         </>
     );
 }

@@ -51,11 +51,8 @@ export default function Projects() {
                                     : Object.keys(projectDetails).length - 1
                             ]
                         }
-                    >
-                        <div
-                            className={`${styles.plus} ${styles.bRight}`}
-                        ></div>
-                    </a>
+                        className={`${styles.plus} ${styles.bRight}`}
+                    ></a>
                 </div>
                 <div className={styles.left}>
                     <Image src={lscreen} alt="Laptop screen" priority={true} />
@@ -72,9 +69,8 @@ export default function Projects() {
                                     : Object.keys(projectDetails).length - 1
                             ]
                         }
-                    >
-                        <div className={`${styles.plus} ${styles.bLeft}`}></div>
-                    </a>
+                        className={`${styles.plus} ${styles.bLeft}`}
+                    ></a>
                 </div>
 
                 <div className={`${styles.circle} ${styles.cRight}`}>
