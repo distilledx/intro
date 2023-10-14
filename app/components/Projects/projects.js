@@ -3,7 +3,7 @@
 import styles from "./projects.module.css";
 import Image from "next/image";
 import ImageCarousel from "./carousel.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import StateContext from "../../StateContext.js";
 
 import lscreen from "../../../public/left-screen.png";
@@ -13,13 +13,21 @@ import p1L from "../../../public/projects/1-L.png";
 import p1R from "../../../public/projects/1-R.png";
 import p2L from "../../../public/projects/2-L.png";
 import p2R from "../../../public/projects/2-R.png";
+import p3L from "../../../public/projects/3-L.png";
+import p3R from "../../../public/projects/3-R.png";
 
-const imgR = [p1R, p2R];
-const imgL = [p1L, p2L];
+const imgR = [p1R, p2R, p3R];
+const imgL = [p1L, p2L, p3L];
+
+const projectDetails = {
+    0: "https://srmmilan.org/",
+    1: "https://github.com/distilledx/Framebuffer-rendering",
+    2: "https://www.linkedin.com/posts/tejas-vipin-b8788b24b_recently-i-participated-and-won-in-the-quantum-activity-7098741730794999808-Lh0x",
+};
 
 export default function Projects() {
-    const [nextIndexL, setNextIndexL] = useState(0);
-    const [nextIndexR, setNextIndexR] = useState(1);
+    const [nextIndexL, setNextIndexL] = useState(1);
+    const [nextIndexR, setNextIndexR] = useState(0);
 
     return (
         <>
@@ -35,7 +43,19 @@ export default function Projects() {
                     >
                         <ImageCarousel sources={imgR} lr={styles.right} />
                     </StateContext.Provider>
-                    <div className={`${styles.plus} ${styles.bRight}`}></div>
+                    <a
+                        href={
+                            projectDetails[
+                                nextIndexR
+                                    ? nextIndexR - 1
+                                    : Object.keys(projectDetails).length - 1
+                            ]
+                        }
+                    >
+                        <div
+                            className={`${styles.plus} ${styles.bRight}`}
+                        ></div>
+                    </a>
                 </div>
                 <div className={styles.left}>
                     <Image src={lscreen} alt="Laptop screen" priority={true} />
@@ -44,8 +64,19 @@ export default function Projects() {
                     >
                         <ImageCarousel sources={imgL} lr={styles.left} />
                     </StateContext.Provider>
-                    <div className={`${styles.plus} ${styles.bLeft}`}></div>
+                    <a
+                        href={
+                            projectDetails[
+                                nextIndexL
+                                    ? nextIndexL - 1
+                                    : Object.keys(projectDetails).length - 1
+                            ]
+                        }
+                    >
+                        <div className={`${styles.plus} ${styles.bLeft}`}></div>
+                    </a>
                 </div>
+
                 <div className={`${styles.circle} ${styles.cRight}`}>
                     <svg
                         width="50"
@@ -67,6 +98,7 @@ export default function Projects() {
                         />
                     </svg>
                 </div>
+
                 <div className={`${styles.circle} ${styles.cMiddle}`}>
                     <svg
                         width="70"
@@ -86,6 +118,7 @@ export default function Projects() {
                         />
                     </svg>
                 </div>
+
                 <div className={`${styles.circle} ${styles.cLeft}`}>
                     <svg
                         width="50"
