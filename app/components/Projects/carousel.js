@@ -1,17 +1,21 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import StateContext from "../../StateContext.js";
 import Image from "next/image";
 import styles from "./projects.module.css";
 
 export default function ImageCarousel({ sources, lr }) {
-    const [nextIndex, setNextIndex] = useState(1);
-    const [currentA, setA] = useState(sources[0]);
-    const [currentB, setB] = useState(sources[1]);
+    const { 0: nextIndex, 1: setNextIndex } = Object.values(
+        useContext(StateContext)
+    );
+    const [currentA, setA] = useState(sources[nextIndex]);
+    const [currentB, setB] = useState(sources[nextIndex % 2]);
     const [stop, setStop] = useState(100);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
+            console.log(typeof nextIndex);
             setA(sources[nextIndex]);
             setStop(100);
             setB(sources[(nextIndex + 1) % sources.length]);
@@ -54,11 +58,3 @@ export default function ImageCarousel({ sources, lr }) {
         </>
     );
 }
-
-/*
-2 images A, B. A exactly overlaps B
-A - showing current B - showing next
-Change class of A to another class which has an animation which makes it disappear
-Change src of A to B's current src
-Change B's src to next image
-*/

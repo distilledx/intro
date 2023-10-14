@@ -1,6 +1,10 @@
+"use client";
+
 import styles from "./projects.module.css";
 import Image from "next/image";
 import ImageCarousel from "./carousel.js";
+import { useState } from "react";
+import StateContext from "../../StateContext.js";
 
 import lscreen from "../../../public/left-screen.png";
 import rscreen from "../../../public/right-screen.png";
@@ -11,9 +15,12 @@ import p2L from "../../../public/projects/2-L.png";
 import p2R from "../../../public/projects/2-R.png";
 
 const imgR = [p1R, p2R];
-const imgL = [p2L, p1L];
+const imgL = [p1L, p2L];
 
 export default function Projects() {
+    const [nextIndexL, setNextIndexL] = useState(0);
+    const [nextIndexR, setNextIndexR] = useState(1);
+
     return (
         <>
             <div className={styles.fullContainer}>
@@ -23,12 +30,20 @@ export default function Projects() {
                 </div>
                 <div className={styles.right}>
                     <Image src={rscreen} alt="Laptop screen" priority={true} />
-                    <ImageCarousel sources={imgR} lr={styles.right} />
+                    <StateContext.Provider
+                        value={{ nextIndexR, setNextIndexR }}
+                    >
+                        <ImageCarousel sources={imgR} lr={styles.right} />
+                    </StateContext.Provider>
                     <div className={`${styles.plus} ${styles.bRight}`}></div>
                 </div>
                 <div className={styles.left}>
                     <Image src={lscreen} alt="Laptop screen" priority={true} />
-                    <ImageCarousel sources={imgL} lr={styles.left} />
+                    <StateContext.Provider
+                        value={{ nextIndexL, setNextIndexL }}
+                    >
+                        <ImageCarousel sources={imgL} lr={styles.left} />
+                    </StateContext.Provider>
                     <div className={`${styles.plus} ${styles.bLeft}`}></div>
                 </div>
                 <div className={`${styles.circle} ${styles.cRight}`}>
