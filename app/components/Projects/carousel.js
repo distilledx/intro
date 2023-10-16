@@ -48,6 +48,7 @@ export default function ImageCarousel({ sources, lr }) {
                 style={{
                     zIndex: "3",
                     maskImage: `linear-gradient(to right,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1)${stop}%, rgba(255, 255, 255, 0) ${stop}%, rgba(255, 255, 255, 0) 100%)`,
+                    WebkitMaskImage: `linear-gradient(to right,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1)${stop}%, rgba(255, 255, 255, 0) ${stop}%, rgba(255, 255, 255, 0) 100%)`,
                 }}
             ></Image>
             <Image
