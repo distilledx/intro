@@ -28,6 +28,7 @@ const projectDetails = {
 export default function Projects() {
     const [nextIndexL, setNextIndexL] = useState(1);
     const [nextIndexR, setNextIndexR] = useState(0);
+    const [forceNext, forceNextIndex] = useState(999);
 
     return (
         <>
@@ -39,7 +40,7 @@ export default function Projects() {
                 <div className={styles.right}>
                     <Image src={rscreen} alt="Laptop screen" priority={true} />
                     <StateContext.Provider
-                        value={{ nextIndexR, setNextIndexR }}
+                        value={{ nextIndexR, setNextIndexR, forceNext }}
                     >
                         <ImageCarousel sources={imgR} lr={styles.right} />
                     </StateContext.Provider>
@@ -57,7 +58,7 @@ export default function Projects() {
                 <div className={styles.left}>
                     <Image src={lscreen} alt="Laptop screen" priority={true} />
                     <StateContext.Provider
-                        value={{ nextIndexL, setNextIndexL }}
+                        value={{ nextIndexL, setNextIndexL, forceNext }}
                     >
                         <ImageCarousel sources={imgL} lr={styles.left} />
                     </StateContext.Provider>
@@ -73,7 +74,10 @@ export default function Projects() {
                     ></a>
                 </div>
 
-                <div className={`${styles.circle} ${styles.cRight}`}>
+                <div
+                    className={`${styles.circle} ${styles.cRight}`}
+                    onClick={() => forceNextIndex(Math.abs(forceNext) + 1)}
+                >
                     <svg
                         width="50"
                         height="50"
@@ -115,7 +119,10 @@ export default function Projects() {
                     </svg>
                 </div>
 
-                <div className={`${styles.circle} ${styles.cLeft}`}>
+                <div
+                    className={`${styles.circle} ${styles.cLeft}`}
+                    onClick={() => forceNextIndex(-(Math.abs(forceNext) + 1))}
+                >
                     <svg
                         width="50"
                         height="50"
