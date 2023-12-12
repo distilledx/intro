@@ -14,13 +14,16 @@ export default function ImageCarousel({ sources, lr }) {
     );
     const [currentB, setB] = useState(sources[nextIndex]);
     const [stop, setStop] = useState(100);
+    const projSwitcher = (i) => {
+        setA(currentB);
+        setStop(100);
+        setNextIndex((nextIndex + 1) % sources.length);
+        setB(sources[nextIndex]);
+    };
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setA(currentB);
-            setStop(100);
-            setNextIndex((nextIndex + 1) % sources.length);
-            setB(sources[nextIndex]);
+            projSwitcher(0);
         }, 5000);
 
         return () => {
