@@ -5,7 +5,7 @@ import StateContext from "../../StateContext.js";
 import Image from "next/image";
 import styles from "./projects.module.css";
 
-export default function ImageCarousel({ sources, lr }) {
+export default function ImageCarousel({ sources }) {
     const {
         0: nextIndex,
         1: setNextIndex,
@@ -65,7 +65,7 @@ export default function ImageCarousel({ sources, lr }) {
         <>
             <Image
                 src={currentA}
-                className={`${styles.pictures} ${lr}`}
+                className={`${styles.pictures}`}
                 alt="Projects"
                 priority={true}
                 style={{
@@ -80,7 +80,7 @@ export default function ImageCarousel({ sources, lr }) {
             ></Image>
             <Image
                 src={currentB}
-                className={`${styles.pictures} ${lr}`}
+                className={`${styles.pictures}`}
                 alt=""
                 style={{ zIndex: "2" }}
             ></Image>

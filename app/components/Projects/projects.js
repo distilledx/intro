@@ -34,44 +34,56 @@ export default function Projects() {
         <>
             <div className={styles.fullContainer}>
                 <div className={styles.mainContainer}>
-                    <div className={styles.pinkL}></div>
-                    <div className={styles.blueR}></div>
-                </div>
-                <div className={styles.right}>
-                    <Image src={rscreen} alt="Laptop screen" priority={true} />
-                    <StateContext.Provider
-                        value={{ nextIndexR, setNextIndexR, forceNext }}
-                    >
-                        <ImageCarousel sources={imgR} lr={styles.right} />
-                    </StateContext.Provider>
-                    <a
-                        href={
-                            projectDetails[
-                                nextIndexR
-                                    ? nextIndexR - 1
-                                    : Object.keys(projectDetails).length - 1
-                            ]
-                        }
-                        className={`${styles.plus} ${styles.bRight}`}
-                    ></a>
-                </div>
-                <div className={styles.left}>
-                    <Image src={lscreen} alt="Laptop screen" priority={true} />
-                    <StateContext.Provider
-                        value={{ nextIndexL, setNextIndexL, forceNext }}
-                    >
-                        <ImageCarousel sources={imgL} lr={styles.left} />
-                    </StateContext.Provider>
-                    <a
-                        href={
-                            projectDetails[
-                                nextIndexL
-                                    ? nextIndexL - 1
-                                    : Object.keys(projectDetails).length - 1
-                            ]
-                        }
-                        className={`${styles.plus} ${styles.bLeft}`}
-                    ></a>
+                    <div className={styles.pinkL}>
+                        <div className={styles.left} style={{ zIndex: "2" }}>
+                            <Image
+                                src={lscreen}
+                                alt="Laptop screen"
+                                priority={true}
+                            />
+                            <StateContext.Provider
+                                value={{ nextIndexL, setNextIndexL, forceNext }}
+                            >
+                                <ImageCarousel sources={imgL} />
+                            </StateContext.Provider>
+                            <a
+                                href={
+                                    projectDetails[
+                                        nextIndexL
+                                            ? nextIndexL - 1
+                                            : Object.keys(projectDetails)
+                                                  .length - 1
+                                    ]
+                                }
+                                className={`${styles.plus} ${styles.bLeft}`}
+                            ></a>
+                        </div>
+                    </div>
+                    <div className={styles.blueR}>
+                        <div className={styles.right}>
+                            <Image
+                                src={rscreen}
+                                alt="Laptop screen"
+                                priority={true}
+                            />
+                            <StateContext.Provider
+                                value={{ nextIndexR, setNextIndexR, forceNext }}
+                            >
+                                <ImageCarousel sources={imgR} />
+                            </StateContext.Provider>
+                            <a
+                                href={
+                                    projectDetails[
+                                        nextIndexR
+                                            ? nextIndexR - 1
+                                            : Object.keys(projectDetails)
+                                                  .length - 1
+                                    ]
+                                }
+                                className={`${styles.plus} ${styles.bRight}`}
+                            ></a>
+                        </div>
+                    </div>
                 </div>
 
                 <div
